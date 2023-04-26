@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-  title = 'frontEndHotel';
 
+@Component({
+  selector: 'app-profil-admin',
+  templateUrl: './profil-admin.component.html',
+  styleUrls: ['./profil-admin.component.css']
+})
+export class ProfilAdminComponent {
 
   constructor(private router: Router) { }
 

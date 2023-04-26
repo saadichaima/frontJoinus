@@ -1,0 +1,52 @@
+<div class="container spacer">
+	<div class="panel panel-primary">
+		<div class="panel-heading"> Liste des restaurations </div>
+		<div class="panel-body">
+			  <div class="form-group row">
+			    <label for="staticID" class="col-sm-2 col-form-label"> Nom</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control-plaintext" [(ngModel)]="motCle" />
+			      <button class="btn btn-primary" (click)="chercherRestauration()">Chercher</button>
+			    </div>
+
+			  </div>
+			  
+			<table class="table table-striped ">
+				<tr>
+					<th>ID</th>
+					<th>NOM</th>
+					<th>Type </th>
+					<th>Type Repas  </th>
+					<th>Description </th>
+					<th *ngIf="mode==1">---------------</th>
+				</tr>
+				<tr *ngFor="let c of pageClients?.content">
+					<td><a (click)="gotoPageRestauration(c.idRestauration)" class="clickable" >{{c.idRestauration}}</a></td>
+					<td>{{c.nomRestauration}}</td>
+					<td>{{c.typeRestauration}}</td>
+					<td>{{c.typeRepas}}</td>
+					<td>{{c.description}}</td>
+					<td *ngIf="mode==1"><button class="btn btn-primary" (click)="modifierRestauration(c.idRestauration)">Modifier</button> <button class="btn btn-primary"  (click)="supprimerRestauration(c)" >Annuler</button></td>
+
+				</tr>
+			</table>
+			<div class="container">
+				<ul class="nav nav-pills">
+					<li  [ngClass]="{'active' :currentPage ==(i)}"  *ngFor = "let p of pages; let i=index" >
+
+						<a (click)="gotoPage(i)" class="clickable" >{{i}}</a>
+
+				    </li>
+
+				</ul>
+
+			</div>
+			
+		</div>
+
+	</div>
+
+
+
+</div>
+<app-button></app-button>

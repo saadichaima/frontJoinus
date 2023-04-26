@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-navadmin',
+  templateUrl: './navadmin.component.html',
+  styleUrls: ['./navadmin.component.css']
 })
-export class AppComponent {
-  title = 'frontEndHotel';
+export class NavadminComponent {
+
 
 
   constructor(private router: Router) { }
@@ -58,9 +58,6 @@ export class AppComponent {
     else
       return 0;
   }
-
-
-
 
 
 }

@@ -1,0 +1,73 @@
+<div class="container spacer">
+	<div class="panel panel-primary">
+		<div class="panel-heading"> Liste des clients </div>
+		<div class="panel-body">
+			  <div class="form-group row">
+			    <label for="staticID" class="col-sm-2 col-form-label"> Nom</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control-plaintext" [(ngModel)]="motCle" />
+			      <button class="btn btn-primary" (click)="chercherClient()">Chercher</button>
+			    </div>
+
+			  </div>
+
+			  <div class="form-group row">
+			    <label for="staticID" class="col-sm-2 col-form-label"> Type Hebergement</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control-plaintext" [(ngModel)]="typeHebergement" />
+			      <button class="btn btn-primary" (click)="chercherClientByTypeHebergement()">Chercher clients par type hebergement</button>
+			    </div>
+
+			  </div>
+
+			   <div class="form-group row">
+			    <label for="staticID" class="col-sm-2 col-form-label"> Type Restauration</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control-plaintext" [(ngModel)]="typeRestauration" />
+			      <button class="btn btn-primary" (click)="chercherClientByTypeHebergement()">Chercher clients par type restauration</button>
+			    </div>
+
+			  </div>
+			  
+			<table class="table table-striped ">
+				<tr>
+					<th>ID</th>
+					<th>NOM</th>
+					<th>MAIL</th>
+					<th>ADRESSE</th>
+					<th>TEL </th>
+					<!--<th>Type Hebergement </th>
+					<th>Nom Réservation </th>-->
+				</tr>
+				<tr *ngFor="let c of pageClients?.content">
+					<td>{{c.idClient}}</td>
+					<td>{{c.nomClient}}</td>
+					<td>{{c.email}}</td>
+					<td>{{c.adresse}}</td>
+					<td>{{c.tel}}</td>
+					<!--<td>{{c.reservation.hebergement.typeHebergement}}</td>
+					<td>{{c.reservation.nomReservation}}</td>-->
+				</tr>
+			</table>
+			
+
+			<div class="container">
+				<ul class="nav nav-pills">
+					<li  [ngClass]="{'active' :currentPage ==(i)}"  *ngFor = "let p of pages; let i=index" >
+
+						<a (click)="gotoPage(i)" class="clickable" >{{i}}</a>
+
+				    </li>
+
+				</ul>
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+
+
+</div>

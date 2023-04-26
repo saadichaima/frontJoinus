@@ -1,0 +1,77 @@
+
+<div id="fh5co-wrapper">
+  <div id="fh5co-page">
+    <div id="fh5co-header">
+      <header id="fh5co-header-section">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+            <h1 id="fh5co-logo"><a routerLink="/profil_admin">Administrateur</a></h1>
+            <!-- START #fh5co-menu-wrap -->
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <!--  <li>
+                  <a class="active" href="index.html">Home</a>
+                </li> -->
+
+                <li>
+                  <a class="fh5co-sub-ddown">Clients</a>
+                  <ul class="fh5co-sub-menu">
+                    <li><a routerLink="/clients">Lister les clients</a></li>
+                
+                    <li><a routerLink="/new-client">ajouter client</a></li>
+                   
+
+
+
+                  </ul>
+                </li>
+                <li>
+                  <a class="fh5co-sub-ddown">Restaurations</a>
+                  <ul class="fh5co-sub-menu">
+                    <li>
+                      <a routerLink="/restaurations"
+                        >Lister les Restaurations</a
+                      >
+                    </li>
+                    <li>
+                      <a routerLink="/new-restauration"
+                        >Ajouter Restauration
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li><a class="fh5co-sub-ddown">Réservations</a>
+                  <ul class="fh5co-sub-menu">
+                    <li>
+                      <a routerLink="/new-reservation">ajouter reservation</a>
+                    </li>
+                    <li><a routerLink="/reservations">consulter reservation</a></li>
+                  </ul>
+                
+                </li>
+
+                <li>
+                  <a href="services.html" class="fh5co-sub-ddown"
+                    >Hébergements</a
+                  >
+                  <ul class="fh5co-sub-menu">
+                    <li>
+                      <a routerLink="/new-hebergement">Nouveau Hebergement</a>
+                    </li>
+                    <li><a routerLink="/hebergements">Hebergements</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <app-clients> </app-clients>
+   
+  </div>
+</div>
+<app-button></app-button>

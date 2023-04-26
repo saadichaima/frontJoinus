@@ -1,0 +1,17 @@
+
+<div class="container spacer">
+    <div *ngIf="logged">
+      <div *ngIf="stringToNumber(isAdmin) == 1">
+        <button routerLink="/profil_admin" class="btn btn-primary">
+          Mon compte
+        </button>
+        <button (click)="logout()" class="btn btn-danger">Déconnexion</button>
+      </div>
+  
+      <div class="boutonet" *ngIf="stringToNumber(isAdmin) == 0">
+        <button routerLink="/profil_admin" class="btn btn-success rounded-0">Mon compte</button>
+  
+        <button (click)="logout()" class="btn btn-danger">Déconnexion</button>
+      </div>
+    </div>
+  </div>

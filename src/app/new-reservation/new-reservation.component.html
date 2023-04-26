@@ -1,0 +1,65 @@
+<div class="container spacer">
+	<div class="panel panel-primary">
+		<div class="panel-heading"> Nouveau Réservation</div>
+			<div class="panel-body">
+			  
+
+				  <div class="form-group">
+				    <label for="staticID" class="control-label"> Nom :</label>
+				    <input type="text"  class="form-control" [(ngModel)]="reservation.nomReservation" />
+				  </div>
+
+
+				  <div class="form-group">
+				    <label for="staticID" class="control-label"> Nombre personne :</label>
+				     <input type="text" class="form-control" [(ngModel)]="reservation.nbrPersonne" />
+				  </div>
+
+				  <!-- <div *ngIf="resOrNo" class="form-group">
+				    <label for="staticID" class="ccontrol-label"> Total :</label>
+				    <input type="email" class="form-control"  readonly="readonly" id="staticEmail" [(ngModel)]="hebergement.tarifHebergement" />
+				  </div> -->
+				  <!-- <div *ngIf="!resOrNo" class="form-group">
+				    <label for="staticID" class="ccontrol-label"> Total :</label>
+				    <input type="email" class="form-control"  readonly="readonly" id="staticEmail" [(ngModel)]="hebergement.tarifHebergement" />
+				  </div> -->
+				 <div class="form-group">
+				   	<label for="staticID" class="ccontrol-label"> Type de paiement :</label>
+					  <select [(ngModel)]="reservation.typePaiement"  class="form-control" required>
+						  <option value="carte banacaire " selected>Carte Bancaire</option>
+						  <option value="Paiement ne ligne">Paiement en ligne </option>
+						  <option value="Espèce"> Espèce</option>
+						</select>
+				    </div>
+
+				  <div class="form-group">
+				    <label for="staticID" class="ccontrol-label"> Nom Hebergement :</label>
+				    <input type="text" class="form-control"  [(ngModel)]="hebergement.typeHebergement" />
+				  </div>
+                   
+				   <div *ngIf="resOrNo" class="form-group">
+				    <label for="staticID" class="ccontrol-label"> Type Restauration :</label>
+				    <input type="text" class="form-control" readonly="readonly" [(ngModel)]="restauration.typeRestauration" />
+				  </div>
+                  <div *ngIf="resOrNo" class="form-group">
+				    <label for="staticID" class="ccontrol-label"> Type Repas:</label>
+				    <input type="text" class="form-control" readonly="readonly" [(ngModel)]="restauration.typeRepas" />
+				  </div>
+
+
+				  <!-- <div class="form-group">
+				    <label for="staticID" class="ccontrol-label">Periode :</label>
+				    {{semaine.dateDernierJour | date :  "dd.MM.y"  }} | 
+				     {{ semaine.datePremierJour | date :  "dd.MM.y"  }}
+				  </div> -->
+
+
+			   <button class="btn btn-primary" (click)="ajouterReservation()">Ajouter</button>
+
+
+		</div>
+
+	</div>
+
+</div>
+<app-button></app-button>

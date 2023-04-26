@@ -1,0 +1,14 @@
+
+body{
+    background-color: #1a1818;
+    height:100vh;
+}
+.fh5co-intro .fh5co-table-cell .animate-box{
+background-color: black !important;
+}
+#fh5co-wrapper{
+    margin-top: 60px;
+}
+.form-signin-heading{
+    color: rgb(231, 231, 231);
+}
